@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="462.0" prefWidth="658.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.systemwerx.PassGen.PassGenGUIMainController">
+   <children>
+      <ScrollPane layoutX="12.0" layoutY="71.0" prefHeight="305.0" prefWidth="632.0">
+         <content>
+            <TableView fx:id="appList" prefHeight="292.0" prefWidth="627.0">
+              <columns>
+                <TableColumn prefWidth="626.0" style="-fx-font-size: 14px; -fx-alignment: CENTER;" text="Application" />
+              </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+      <Label layoutX="134.0" layoutY="41.0" text="Double click application to get password">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Button layoutX="80.0" layoutY="394.0" mnemonicParsing="false" onAction="#handleNewButton" prefHeight="24.0" prefWidth="90.0" text="New" />
+      <Button layoutX="204.0" layoutY="394.0" mnemonicParsing="false" onAction="#handleEditButton" prefHeight="24.0" prefWidth="90.0" text="Edit" />
+      <Button layoutX="339.0" layoutY="394.0" mnemonicParsing="false" onAction="#handleDeleteButton" prefHeight="24.0" prefWidth="90.0" text="Delete" />
+      <Button layoutX="468.0" layoutY="394.0" mnemonicParsing="false" onAction="#handleHelpButton" prefHeight="24.0" prefWidth="90.0" text="Help" />
+      <MenuBar layoutX="3.0" layoutY="1.0" prefHeight="27.0" prefWidth="652.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Options">
+            <items>
+              <MenuItem onAction="#handleStoreMenu" mnemonicParsing="false" text="Store PassGen password" />
+                  <MenuItem onAction="#handleChangeMenu" mnemonicParsing="false" text="Change PassGen password" />
+                  <MenuItem onAction="#handleLicenseMenu" mnemonicParsing="false" text="License Manager" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="About">
+            <items>
+              <MenuItem fx:id="diagMenu" mnemonicParsing="false" onAction="#handleDiagMenu" text="Diagnostic Info" />
+              <MenuItem mnemonicParsing="false" onAction="#handleAboutMenu" text="About PassGen" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</Pane>
