@@ -1,0 +1,1 @@
+PassgenCmd  /createapplication /application:tsosys2 /keystore:keystore /type:ptkt /keystpwd:password /userid:joe /sesskey:0102030405060708 /offset:0 

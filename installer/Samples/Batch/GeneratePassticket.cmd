@@ -1,0 +1,1 @@
+PassgenCmd  /generateptkt /application:tsosys2 /keystore:keystore /keystpwd:password

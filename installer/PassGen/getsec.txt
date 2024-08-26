@@ -1,0 +1,39 @@
+/* REXX */                                                              00001003
+/*--------------------------------------------------------------------*/00002003
+/* ALL RIGHTS RESERVED                                                */00003003
+/* Licensed materials - Property of Systemwerx Ltd.                   */00004003
+/*--------------------------------------------------------------------*/00005003
+/* This rexx works out how many seconds have passed since 1-1-1970    */00006003
+/* in seconds and adjusts for the offset being used.                  */00007003
+/* The time and date is in the form of a 4-byte field that contains   */00008003
+/* the number of seconds that have elapsed since Jan 1 1970 at 0000   */00009003
+/* GMT in the form of a binary integer                                */00009103
+/*--------------------------------------------------------------------*/00009203
+                                                                        00009303
+trace o                                                                 00009403
+                                                                        00009503
+numeric digits 20                                                       00009603
+/*  Get the Time Zone that this machine is running in */                00009703
+                                                                        00009803
+cvt = C2D(storage(10,4))                                                00009903
+IF    C2D(STORAGE(D2X(cvt+304),1)) < 128 then                           00010003
+    tz  = C2D(STORAGE(D2X(cvt+304),4))                                  00010103
+else                                                                    00010203
+  tz = -(C2D(BITXOR(STORAGE(D2X(cvt+304),4),'ffffffff'x)))              00010303
+tzoff = Format(tz*1.04861,,0)   /* seconds */                           00010403
+                                                                        00010503
+/* Work out the number of days since 1-1-1970 */                        00010603
+datesec = DATE('B') - DATE('B','1 Jan 1970')                            00010703
+                                                                        00010803
+datesec = datesec*3600*24 + ,  /* converted into seconds      */        00010903
+          time('S')  - , /* number of seconds since midnight  */        00011003
+          tzoff            /* GMT shift on the mainframe        */      00011103
+                                                                        00011203
+/*say  datesec 'seconds since 01 January 1970 GMT' */                   00011303
+                                                                        00011403
+call syscalls 'ON'                                                      00020000
+address syscall                                                         00030000
+'time'                                                                  00080000
+say tzoff 'time zone offset'                                            00081003
+say retval 'seconds since 01 January 1970 GMT'                          00090003
+exit(0)                                                                 00100003

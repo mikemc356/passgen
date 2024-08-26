@@ -1,0 +1,1 @@
+PassgenCmd  /displayapplications /keystore:keystore /keystpwd:password

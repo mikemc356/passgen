@@ -1,0 +1,6 @@
+<langpack>
+    <str id="UserPathPanel.headline" txt="OpenJFX folder"/>
+    <str id="UserPathPanel.info" txt="Select the folder where openJFX is installed: "/>
+    <str id="UserPathPanel.required" txt="true"/>
+    <str id="UserPathPanel.summaryCaption" txt="Select the folder where OpenJFX is installed"/>
+</langpack>

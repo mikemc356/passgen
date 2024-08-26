@@ -1,0 +1,1 @@
+java -classpath PassGen.jar com.systemwerx.PassGen.SxPassGenCmd %*
