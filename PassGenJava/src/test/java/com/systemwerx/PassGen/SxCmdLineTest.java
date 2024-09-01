@@ -24,7 +24,7 @@ public class SxCmdLineTest {
         System.setProperty("sxlicense", "");
         String parms[] = {"/createapplication", "/application:TSOS0W1","/keystore:keystore","/keystpwd:pwd",
         "/type:ptkt", "/userid:joe", "/sesskey:E001193519561977", "/offset:0"};
-        assertEquals(sxPassGenCmd.processCommandLine(parms),0);
+        assertEquals(0, sxPassGenCmd.processCommandLine(parms));
 
         String[] arr1 ="/GENERATEPTKT /application:TSOS0W1 /OFFSET:0 /USERID:MIKEM /SESSKEY:E001193519561977".split(" ");
         assertEquals(sxPassGenCmd.processCommandLine(arr1),0);
@@ -36,8 +36,8 @@ public class SxCmdLineTest {
         assertEquals(8, systemOutRule.getLog().trim().length());
         systemOutRule.clearLog();
 
-        String[] arr3 ="/GENERATEPTKT /application:TSOS0W2 /OFFSET:0 /USERID:MIKEM /SESSKEY:E001193519561977".split(" ");
-        assertEquals(sxPassGenCmd.processCommandLine(arr3),16);
+        String[] arr3 ="/GENERATEPTKT /application:TSOS0WX /OFFSET:0 /USERID:MIKEM /SESSKEY:E00119351956197".split(" ");
+        assertEquals(16,sxPassGenCmd.processCommandLine(arr3));
         systemOutRule.clearLog();
 
         String[] arr4 = "/GENERATESKEY /application:TSOS0W1 /SEED:1111 /PASSWORD:mike /SEQUENCE:21".split(" ");
