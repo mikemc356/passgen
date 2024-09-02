@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+
+<izpack:shortcuts version="5.0"
+                  xmlns:izpack="http://izpack.org/schema/shortcuts"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://izpack.org/schema/shortcuts http://izpack.org/schema/5.0/izpack-shortcuts-5.0.xsd">
+<skipIfNotSupported/>
+<programGroup defaultName="PassGen for Java"
+            location="applications"/>
+
+
+<shortcut
+name="PassGen for Java"
+commandLine="-jar $CmdOpts $INSTALL_PATH\sxpassgen-7.jar"
+target="java.exe"
+description="Launch PassGen"
+workingDirectory="$INSTALL_PATH"
+iconFile="$INSTALL_PATH\Images\logo.ico"
+  initialState="normal"
+programGroup="yes"
+desktop="yes"
+applications="no"
+startMenu="no"
+startup="no">
+
+<createForPack name="PassGen Application"/>
+</shortcut>
+
+
+<shortcut
+name="PassGen for Java"
+target="$INSTALL_PATH\Documentation\PassGen_Java.pdf"
+description="User guide"
+initialState="normal"
+programGroup="yes"
+desktop="no"
+applications="no"
+startMenu="no"
+subgroup="\Documentation"
+startup="no">
+
+<createForPack name="Documentation"/>
+</shortcut>
+
+<shortcut
+name="Passgen R7 Release Notes"
+target="$INSTALL_PATH\Documentation\Passgen_Java_R7_Release_Notes.pdf"
+description="Release notes"
+initialState="normal"
+programGroup="yes"
+desktop="no"
+applications="no"
+startMenu="no"
+subgroup="\Documentation"
+startup="no">
+
+<createForPack name="Documentation"/>
+</shortcut>
+
+<shortcut
+name="Uninstall"
+target="$INSTALL_PATH\Uninstaller\uninstaller.jar"
+description="Launch documentation"
+initialState="normal"
+programGroup="yes"
+desktop="no"
+applications="no"
+startMenu="no"
+startup="no">
+
+<createForPack name="PassGen Application"/>
+<createForPack name="Documentation"/>
+</shortcut>
+
+</izpack:shortcuts>
