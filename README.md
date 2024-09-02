@@ -4,6 +4,12 @@ An implementation of IBMs Passticket written in Java
 ## Building
 Build the project using Maven :
 
+First build the common library in repo SXCommon :
+
+    mvn install
+
+Then build the Passgen app :
+
 	mvn package
 
 Run this command from the project root and this builds :
