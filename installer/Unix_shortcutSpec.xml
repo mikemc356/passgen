@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+
+<izpack:shortcuts version="5.0"
+                  xmlns:izpack="http://izpack.org/schema/shortcuts"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://izpack.org/schema/shortcuts http://izpack.org/schema/5.0/izpack-shortcuts-5.0.xsd">
+<skipIfNotSupported/>
+<programGroup defaultName="Systemwerx"
+            location="applications"/>
+<shortcut
+name="PassGen for Java"
+target="/usr/bin/java"
+commandLine="-jar $CmdOpts $INSTALL_PATH/sxpassgen-7.jar"
+description="Launch PassGen for Java"
+iconFile="$INSTALL_PATH/images/logo.ico"
+workingDirectory="$INSTALL_PATH"
+initialState="normal"
+programGroup="yes"
+desktop="no"
+applications="no"
+startMenu="no"
+startup="no"
+type="Application"
+terminal="true"
+encoding="UTF-8">
+
+<createForPack name="PassGen Application"/>
+</shortcut>
+
+<shortcut
+name="Documentation"
+description="Launch documentation"
+initialState="normal"
+programGroup="yes"
+desktop="no"
+applications="no"
+startMenu="no"
+startup="no"
+type="link"
+url="$INSTALL_PATH/documentation"
+terminal="false"
+encoding="UTF-8">
+
+<createForPack name="Documentation"/>
+</shortcut>
+
+</izpack:shortcuts>
