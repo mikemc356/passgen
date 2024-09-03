@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="462.0" prefWidth="658.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.systemwerx.PassGen.PassGenGUIMainController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="462.0" prefWidth="658.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.systemwerx.PassGen.PassGenGUIMainController">
    <children>
       <ScrollPane layoutX="12.0" layoutY="71.0" prefHeight="305.0" prefWidth="632.0">
          <content>
@@ -35,9 +35,8 @@
         <menus>
           <Menu mnemonicParsing="false" text="Options">
             <items>
-              <MenuItem onAction="#handleStoreMenu" mnemonicParsing="false" text="Store PassGen password" />
-                  <MenuItem onAction="#handleChangeMenu" mnemonicParsing="false" text="Change PassGen password" />
-                  <MenuItem onAction="#handleLicenseMenu" mnemonicParsing="false" text="License Manager" />
+              <MenuItem mnemonicParsing="false" onAction="#handleStoreMenu" text="Store PassGen password" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleChangeMenu" text="Change PassGen password" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="About">

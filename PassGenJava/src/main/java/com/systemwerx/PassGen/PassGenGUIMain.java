@@ -86,7 +86,7 @@ public class PassGenGUIMain extends Application implements LicenseManagerNotific
          controller = loader.getController();
          controller.init(this);
 
-         if (!lic.verifyLicenseFile(PassGenGUI.getPassGenGUI().getLicenseFile().getAbsolutePath())) {
+         /*if (!lic.verifyLicenseFile(PassGenGUI.getPassGenGUI().getLicenseFile().getAbsolutePath())) {
             stage.hide();
             Log.error("License expired");
             LicenseManager lm = new LicenseManager();
@@ -99,7 +99,7 @@ public class PassGenGUIMain extends Application implements LicenseManagerNotific
             lm.runInCurrentApplication();
             FXOptionPane.showErrorDialog(stage, "License expired - please apply key", "Error");
             return;
-         }
+         }*/
 
          doLogon();
       } catch (Exception ex) {
