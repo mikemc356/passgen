@@ -23,3 +23,7 @@ Build the dependancy SXCommon before attempting the build.
 Install using the installer :
 
     java -jar (installer jar)
+
+License
+
+License for Passgen is Apache License V2 - refer to LICENSE file
